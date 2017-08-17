@@ -8,11 +8,11 @@
 
 > 准备抽时间看几个好的包的源码
 
-## qs [version: 6.5]
+## qs [version: 6.5] [[npm][1] / [github][2]]
  - [x] 看完并注释源码
  - [ ] 分析可能存在的问题
  - [ ] 写一个简化版本（不需要考虑太多的场景）
-[npm][1] / [github][2]
+***
 1. 使用Object.create(null)
 2. 巧用split第二个参数
 3. 合并数组(兼容非数组)
@@ -25,7 +25,7 @@
 10. 合理使用defineProperty, freeze, seal几个函数
 11. 充分利用reduce函数
 12. 利用Object.prototype.toString.call的方式来更精确地判断一个对象的类型
-
+***
 
 
 
