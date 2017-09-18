@@ -1,4 +1,6 @@
 const type = x => Object.prototype.toString.call(x);
+const c = x => encodeURIComponent(x);
+const d = x => decodeURIComponent(x);
 
 function stringify(obj, option = {}) {
     let deleteNull = option.deleteNull || true;
@@ -11,16 +13,16 @@ function stringify(obj, option = {}) {
                 Object.keys(obj[key])
                     .filter(k => !deleteNull || obj[key][k] != null)
                     .forEach(k => {
-                        base += `${key}${brackets}=${obj[key][k]}&`;
+                        base += `${c(key)}${brackets}=${c(obj[key][k])}&`;
                     });
                 break;
             case "[object String]":
             case "[object Number]":
-                base += `${key}=${obj[key]}&`;
+                base += `${c(key)}=${c(obj[key])}&`;
                 break;
             case "[object Null]":
             case "[object Undefined]":
-                base += deleteNull ? "" : `${key}=&`;
+                base += deleteNull ? "" : `${c(key)}=&`;
                 break;
             default:
                 break;
@@ -38,6 +40,8 @@ function parse(url) {
         .map(q => q.split("="))
         .filter(x => x.length === 2)
         .forEach(([k, v]) => {
+            k = d(k);
+            v = d(v);
             k = k.slice(-2) === "[]" ? k.slice(0, -2) : k;
             v = v === "" ? null : v;
             query[k] = query.hasOwnProperty(k) ? [].concat(query[k], v) : v;

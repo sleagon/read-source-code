@@ -10,8 +10,8 @@
 
 ## qs [version: 6.5] [[npm][1] / [github][2]]
  - [x] 看完并注释源码
- - [ ] 分析可能存在的问题
- - [ ] 写一个简化版本（不需要考虑太多的场景）
+ - [x] 分析可能存在的问题
+ - [x] 写一个简化版本（不需要考虑太多的场景）
 ***
 1. 使用Object.create(null)
 2. 巧用split第二个参数
@@ -26,6 +26,9 @@
 11. 充分利用reduce函数
 12. 利用Object.prototype.toString.call的方式来更精确地判断一个对象的类型
 ***
+
+## qs-lite
+qs-lite是一个querystring的简化版本，支持内容有限，适合用在自己的url可控的项目中。
 
 
 
