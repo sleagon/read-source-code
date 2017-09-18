@@ -27,10 +27,15 @@
 12. 利用Object.prototype.toString.call的方式来更精确地判断一个对象的类型
 ***
 
-## qs-lite
+### qs-lite
 qs-lite是一个querystring的简化版本，支持内容有限，适合用在自己的url可控的项目中。
 
 
 
+## request [version: 2.81.0] [[npm][3] / [github][4]]
+ - [ ] 看完并注释源码
+
   [1]: https://www.npmjs.com/package/qs
   [2]: https://github.com/ljharb/qs.git
+  [3]: https://www.npmjs.com/package/request
+  [4]: https://github.com/request/request/tree/master/lib
