@@ -35,7 +35,18 @@ qs-lite是一个querystring的简化版本，支持内容有限，适合用在�
 ## request [version: 2.81.0] [[npm][3] / [github][4]]
  - [ ] 看完并注释源码
 
+## eventemitter3 [version: 2.0.3] [[npm][5] / [github][6]]
+- [x] 看完源码并注释
+
+> eventemitter3基本就是在前段模拟了nodejs的events，只不过eventemitter提供了一个context的参数，这个参数可以自己绑定回调函数的this。代码写的比较通俗易懂，技巧性的东西相对较少。
+
+***
+1. 需要在return的时候附带点操作，使用return do sth here, returnValue;的形式。
+***
+
   [1]: https://www.npmjs.com/package/qs
   [2]: https://github.com/ljharb/qs.git
   [3]: https://www.npmjs.com/package/request
   [4]: https://github.com/request/request/tree/master/lib
+  [5]: https://www.npmjs.com/package/eventemitter3
+  [6]: git://github.com/primus/eventemitter3.git
